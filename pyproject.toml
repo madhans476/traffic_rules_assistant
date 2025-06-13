@@ -1,0 +1,18 @@
+[project]
+name = "traffic-rules-assistant"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.11"
+dependencies = [
+    "chromadb>=0.6.3",
+    "dotenv>=0.9.9",
+    "faiss-cpu>=1.11.0",
+    "fastapi>=0.115.12",
+    "groq>=0.27.0",
+    "langchain>=0.3.25",
+    "langchain-community>=0.3.25",
+    "langchain-groq>=0.3.2",
+    "sentence-transformers>=4.1.0",
+    "uvicorn>=0.34.3",
+]
