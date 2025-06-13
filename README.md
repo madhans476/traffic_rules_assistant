@@ -129,12 +129,12 @@ Manual test cases:
 
 ### Chunking:
 
-* `chunk_size = 1000`
-* `overlap = 200`
+* `chunk_size = 300`
+* `overlap = 50`
 
 ### FAISS:
 
-* `IndexFlatL2` used for vector similarity search
+* `IndexFlatIP` used for vector similarity search
 
 ### LLM (Groq):
 
@@ -212,5 +212,5 @@ If you use this in academic work:
 ## Contact
 
 **Maintainer:** Madhan S
-**Email:** [your.email@example.com](mailto:22bds036@iiitdwd.ac.in)
-**GitHub:** [@your-username](https://github.com/madhans476)
+**Email:** [mail](mailto:22bds036@iiitdwd.ac.in)
+**GitHub:** [@madhans476](https://github.com/madhans476)
