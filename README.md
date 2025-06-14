@@ -7,15 +7,15 @@ An AI-powered assistant built using Retrieval-Augmented Generation (RAG) that pr
 ![Alt text](https://github.com/madhans476/repo-image/blob/main/traffic_rules_assistant/Screenshot%202025-06-13%20163402.png)
 
 ## Repo Structure
-
+```plaintext
 traffic_rules_assistant/
 ├── .venv/          
 ├── data/
-|     ├── processed/
-|     |       ├── faiss_index.idx
-|     |       ├── TN_traffic_rules.json
-|     |       └──  TN_traffic_rules.txt
-|     └──  TN Traffic rules.pdf
+|   ├── processed/
+|   |    ├── faiss_index.idx
+|   |    ├── TN_traffic_rules.json
+|   |    └── TN_traffic_rules.txt
+|   └──  TN Traffic rules.pdf
 ├── src/
 │   ├── chunking.py 
 │   ├── embedding.py 
@@ -32,6 +32,7 @@ traffic_rules_assistant/
 ├── README.md
 ├── requirements.txt
 └── pyproject.toml
+```
 
 ## Overview
 
@@ -240,5 +241,6 @@ If you use this in academic work:
 ## Contact
 
 **Maintainer:** Madhan S
-**Email:** [mail](mailto:22bds036@iiitdwd.ac.in)
-**GitHub:** [@madhans476](https://github.com/madhans476)
+- **Email:** [mail](mailto:22bds036@iiitdwd.ac.in)
+- **GitHub:** [@madhans476](https://github.com/madhans476)
+- **LinkedIn** [@madhans17](https://www.linkedin.com/in/madhan-s17/)
