@@ -5,6 +5,34 @@ An AI-powered assistant built using Retrieval-Augmented Generation (RAG) that pr
 ---
 ![Alt text](https://github.com/madhans476/repo-image/blob/main/traffic_rules_assistant/Screenshot%202025-06-13%20163336.png)
 ![Alt text](https://github.com/madhans476/repo-image/blob/main/traffic_rules_assistant/Screenshot%202025-06-13%20163402.png)
+
+## Repo Structure
+
+traffic_rules_assistant/
+├── .venv/          
+├── data/
+|     ├── processed/
+|     |       ├── faiss_index.idx
+|     |       ├── TN_traffic_rules.json
+|     |       └──  TN_traffic_rules.txt
+|     └──  TN Traffic rules.pdf
+├── src/
+│   ├── chunking.py 
+│   ├── embedding.py 
+│   ├── generator.py
+│   ├── retriever.py
+│   ├── main.py
+│   └── text_extraction.py 
+├── api/
+│   └──  app.py
+├── frontend/ 
+│   └── index.html  
+├── .gitignore
+├── .python-version
+├── README.md
+├── requirements.txt
+└── pyproject.toml
+
 ## Overview
 
 This project extracts legal content from a government-issued traffic PDF and makes it queryable via natural language questions using a custom-built RAG pipeline. It uses:
@@ -23,7 +51,6 @@ The assistant is designed to provide concise, legally grounded, and verifiable a
 * Citizens of Tamil Nadu
 * Driving school instructors and trainees
 * Traffic law educators
-* Law enforcement agencies
 * AI/ML enthusiasts learning about RAG pipelines
 
 ---
