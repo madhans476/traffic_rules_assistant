@@ -12,3 +12,6 @@ wheels/
 uv.lock
 
 .env
+
+src/__pycache__
+api/__pycache__
