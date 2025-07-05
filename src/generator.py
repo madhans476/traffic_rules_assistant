@@ -15,7 +15,7 @@ class Generator:
         """
         Initializes the Groq-based LLM and the retriever.
         """
-        # 🧠 Load your Retriever
+        # Load your Retriever
         BASE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), ".."))
 
         self.retriever = Retriever(
@@ -24,7 +24,7 @@ class Generator:
         )
 
 
-        # 🤖 Initialize Groq LLM via LangChain
+        # Initialize Groq LLM via LangChain
         self.llm = ChatGroq(
             model_name=model_name,
             temperature=0.3,
@@ -35,7 +35,7 @@ class Generator:
         """
         Uses retriever to find context and Groq to generate an answer.
         """
-        # 📄 Step 1: Retrieve top-k relevant chunks
+        # Retrieve top-k relevant chunks
         relevant_chunks = self.retriever.query(query, top_k)
 
         # print("Relevant Chunks: ")
@@ -46,7 +46,7 @@ class Generator:
         
         context = "\n\n".join([chunk["text"] for chunk in relevant_chunks])
 
-        # 🧾 Step 2: Create prompt using System + Human messages
+        # Create prompt using System + Human messages
         messages = [
             SystemMessage(
                 content=(
@@ -63,7 +63,6 @@ class Generator:
                     # Output Constraints
                     "Give clear, factual, and concise answers. If applicable, include:\n"
                     "- Specific penalties, fines (₹), or legal terms\n"
-                    "- Rule numbers or sections (if present)\n"
                     "- Safety instructions or procedures\n\n"
 
                     # Role/Persona
@@ -81,11 +80,10 @@ class Generator:
             )
         ]
 
-        # 🧠 Step 3: Generate and return answer from Groq LLM
+        # Generate and return answer from Groq LLM
         response = self.llm(messages)
         return response.content
 
-# 🧪 Test runner
 if __name__ == "__main__":
     generator = Generator()
     query = "What are the rules for overtaking?"
