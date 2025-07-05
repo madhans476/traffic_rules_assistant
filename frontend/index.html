@@ -1,1 +1,73 @@
-Check frontend.txt for code.
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tamil Nadu Traffic Rules Assistant</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="chat-app">
+        <div class="header">
+            <div class="header-content">
+                <div class="traffic-icon">🚦</div>
+                <div class="header-text">
+                    <h1>Tamil Nadu Traffic Assistant</h1>
+                    <p>Your AI-powered guide to traffic rules, fines & road safety</p>
+                </div>
+            </div>
+            <div class="status-indicator" id="statusIndicator">
+                <div class="status-dot" id="statusDot"></div>
+                <div class="status-text" id="statusText">Connecting...</div>
+            </div>
+        </div>
+
+        <div class="chat-container scrollbar-custom" id="chatContainer">
+            <div class="welcome-card">
+                <h2>🚗 Welcome to Your Traffic Assistant!</h2>
+                <p>I'm here to help you understand Tamil Nadu traffic rules, penalties, license procedures, and road safety guidelines. Ask me anything!</p>
+                
+                <div class="sample-questions">
+                    <div class="sample-question" onclick="askSampleQuestion('What is the fine amount for not wearing a helmet?')">
+                        💰 What is the fine amount for not wearing a helmet?
+                    </div>
+                    <div class="sample-question" onclick="askSampleQuestion('How to apply for a driving license?')">
+                        📄 How to apply for a driving license?
+                    </div>
+                    <div class="sample-question" onclick="askSampleQuestion('What are the speed limits in Tamil Nadu?')">
+                        🏃 What are the speed limits in Tamil Nadu?
+                    </div>
+                    <div class="sample-question" onclick="askSampleQuestion('Tax rates')">
+                        🚫 Tax rates
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="typing-indicator" id="typingIndicator">
+            <div class="typing-dots">
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+                <div class="typing-dot"></div>
+            </div>
+        </div>
+
+        <div class="input-container">
+            <div class="input-wrapper">
+                <div class="input-field">
+                    <textarea 
+                        id="queryInput" 
+                        placeholder="Ask me about traffic rules, fines, procedures..."
+                        rows="1"
+                    ></textarea>
+                </div>
+                <button id="askButton" title="Send message">
+                    ➤
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
